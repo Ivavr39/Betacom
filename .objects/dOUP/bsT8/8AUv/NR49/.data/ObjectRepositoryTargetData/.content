@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="08v13lAduk6IhSavpqcHfw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://prs.ms.gov.pl/" CvTextArea="731, 477, 317, 28" CvTextArgument="Krajowy Rejestr Zadluzonych" CvType="Text" DesignTimeRectangle="732, 475, 373, 30" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Krajowy Rejestr'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;prs-root&amp;gt;ds-layout&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;ds-layout-content&amp;gt;prs-ekrs-page&amp;gt;prs-services-grid&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;prs-service-tile&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;h2' idx='2' tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='H2' aaname='Krajowy Rejestr Zadłużonych' check:innerText='Krajowy Rejestr Zadłużonych' /&gt;" Guid="3f06bd7e-93a8-4568-88b9-f03dce82a89a" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal Rejestrów Sądowych' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="605fe2af6cf937b8319064aed522747e.png" xmlns="">0VQol7DB830u2Sb0EdlviUw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

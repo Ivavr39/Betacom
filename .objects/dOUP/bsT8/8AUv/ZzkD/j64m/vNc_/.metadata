@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Wyczyść",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "vNc_1zRM4UiYS9E83lPBsQ",
+  "Reference": "fZ-8QgXm3kuyfXKqy9Lojw/vNc_1zRM4UiYS9E83lPBsQ",
+  "ParentRef": "fZ-8QgXm3kuyfXKqy9Lojw/j64mQec_Ok2RGfIKpc0fiA",
+  "Created": "2023-11-05T15:26:35.3719612Z",
+  "Updated": "2023-11-05T15:26:54.6058811Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

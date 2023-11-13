@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ig9ux2AFmkix9YjY1co1sA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://krz-rejpub-gui-krz-pub-prod.apps.ocp.prod.ms.gov.pl/#/rejestr-krz?_viewpath=KrzRejPubGui.WyszukiwaniePodmiotow&amp;_timestamp=1699183059711" DesignTimeRectangle="334, 842, 40, 25" DesignTimeScaleFactor="1.25" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl idx='2' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;app-rejestr-krz-view&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p-messages&amp;gt;div&amp;gt;span' isleaf='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl type='' isleaf='1' tag='SPAN' class='ui-messages-icon pi ng-tns-c61-7 pi-exclamation-triangle' aaname='' /&gt;" Guid="9798cd98-929b-4280-aa6d-50cfb899013b" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Wyszukiwanie podmiotów' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="a9895d06082a400512ac9686115ccf2e.png" xmlns="">09V8LRFNo1EqA5ihIlJ6Fsw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Wyszukiwarka KRS",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "j64mQec_Ok2RGfIKpc0fiA",
+  "Reference": "fZ-8QgXm3kuyfXKqy9Lojw/j64mQec_Ok2RGfIKpc0fiA",
+  "ParentRef": "fZ-8QgXm3kuyfXKqy9Lojw/ZzkDu_dqnE20YHX-B_sxww",
+  "Created": "2023-11-04T13:57:02.3025732Z",
+  "Updated": "2023-11-04T13:57:27.1221132Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

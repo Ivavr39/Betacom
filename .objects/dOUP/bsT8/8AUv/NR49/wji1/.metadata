@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Brak Wyników",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "wji1M5KTC06FwlAydxzGGw",
+  "Reference": "fZ-8QgXm3kuyfXKqy9Lojw/wji1M5KTC06FwlAydxzGGw",
+  "ParentRef": "fZ-8QgXm3kuyfXKqy9Lojw/NR49y-aAQEm9Shey71Dq4Q",
+  "Created": "2023-11-05T11:24:47.9570061Z",
+  "Updated": "2023-11-05T11:25:14.400781Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

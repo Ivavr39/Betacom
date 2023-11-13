@@ -1,0 +1,358 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Process_KRZ" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="br_Chrome" Type="InOutArgument(ui:Browser)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="io_dt_KRZ" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="in_str_NumerKRS" Type="InArgument(x:String)" />
+    <x:Property Name="io_TransactionItem" Type="InOutArgument(sd:DataRow)" />
+  </x:Members>
+  <this:Process_KRZ.in_str_NumerKRS>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Process_KRZ.in_str_NumerKRS>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1410.4,3848.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Process_KRZ_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Process_KRZ" sap:VirtualizedContainerService.HintSize="1369.6,3784" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="int_CurrentInputRowKRZ" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_Postępowania" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message - Start" sap:VirtualizedContainerService.HintSize="1307.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Sprawdzam dane dot. postepowan dla społki o numerze KRS &quot; +in_str_NumerKRS]" />
+    <Assign DisplayName="Przypisz numer procesowanego row'a z tabeli KRZ" sap:VirtualizedContainerService.HintSize="1307.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Int32">[int_CurrentInputRowKRZ]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Int32">[io_dt_KRZ.AsEnumerable.ToList.FindIndex(Function(row) row("Numer KRS").ToString = in_str_NumerKRS)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1307.2,3368" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[br_Chrome]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="44f9ccc4-3268-4fc1-989b-ea7ff2c872a3" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1273.6,3231.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGoToUrl DisplayName="Go To URL - https://prs.ms.gov.pl/" sap:VirtualizedContainerService.HintSize="1211.2,82.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[in_Config(&quot;PRS_URL&quot;).ToString]" Version="V3" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Krajowy Rejestr Zadłużonych'" sap:VirtualizedContainerService.HintSize="1211.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://prs.ms.gov.pl/" ContentHash="08v13lAduk6IhSavpqcHfw" CvTextArea="731, 477, 317, 28" CvTextArgument="Krajowy Rejestr Zadluzonych" CvType="Text" DesignTimeRectangle="732, 475, 373, 30" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Krajowy Rejestr'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;prs-root&amp;gt;ds-layout&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;ds-layout-content&amp;gt;prs-ekrs-page&amp;gt;prs-services-grid&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;prs-service-tile&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;h2' idx='2' tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='H2' aaname='Krajowy Rejestr Zadłużonych' check:innerText='Krajowy Rejestr Zadłużonych' /&gt;" Guid="3f06bd7e-93a8-4568-88b9-f03dce82a89a" InformativeScreenshot="605fe2af6cf937b8319064aed522747e.png" Reference="fZ-8QgXm3kuyfXKqy9Lojw/NR49y-aAQEm9Shey71Dq4Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal Rejestrów Sądowych' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Portal Publiczny'" sap:VirtualizedContainerService.HintSize="1211.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://prs.ms.gov.pl/krz" ContentHash="1Wq_17IjAk2M1pFkuI4IGg" CvTextArea="188, 331, 178, 27" CvTextArgument="Portal Publiczny" CvType="Text" DesignTimeRectangle="189, 329, 380, 30" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Portal Publiczny'" FullSelectorArgument="&lt;webctrl tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H2' type='' class='' aaname='Portal Publiczny' check:innerText='Portal Publiczny' /&gt;" Guid="65bca684-b4ad-4b72-827e-692c5d44d75b" InformativeScreenshot="7275cb1a9418ca91ac2ced5f3695dcf0.png" Reference="fZ-8QgXm3kuyfXKqy9Lojw/XPPDb9HFwE6-jaR0Uxt2Cw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal Rejestrów Sądowych' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="569, 291, 80, 80" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl aaname='Ikona serwisu Portal Publiczny' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Ikona serwisu Portal Publiczny' tag='IMG' type='' class='' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Wyszukiwanie Podmiotów'" sap:VirtualizedContainerService.HintSize="1211.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://krz.ms.gov.pl/#!/application/KRZPortalPUB/1.9/KrzPortalPubGui.StronaGlowna?params=JTdCJTdE&amp;itemId=item-0&amp;seq=0" ContentHash="bdoNkA9SgE2tw_WuvdaAMw" CvTextArea="776, 712, 228, 22" CvTextArgument="Wyszukiwanie podmiotow" CvType="Text" DesignTimeRectangle="776, 711, 228, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Wyszukiwanie podmiotow'" Guid="8c7fe1f9-f256-4cf8-902f-e707900fef66" InformativeScreenshot="782edf770b84b480a33869202d59864c.png" Reference="fZ-8QgXm3kuyfXKqy9Lojw/SMt9pmAYTUu649m8hpQdtw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Strona główna' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="776, 742, 234, 22" CvTextArgument="i przegladanie postepowan" CvType="Text" DesignTimeRectangle="776, 742, 233, 22" ElementType="Text" FriendlyName="'i przegladanie'" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Identyfikator'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1211.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[in_str_NumerKRS]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://krz-rejpub-gui-krz-pub-prod.apps.ocp.prod.ms.gov.pl/#/rejestr-krz?_viewpath=KrzRejPubGui.WyszukiwaniePodmiotow&amp;_timestamp=1699183059711" ContentHash="InYe5vuC-UW4pS1Ln7gHcQ" CvElementArea="344, 805, 497, 44" CvType="InputBox" DesignTimeRectangle="344, 809, 496, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT inny_id'" FullSelectorArgument="&lt;webctrl idx='2' tag='IFRAME' /&gt;&lt;webctrl id='inny_id' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl id='inny_id' tag='INPUT' type='text' class='ui-inputtext ui-corner-all ui-state-default ui-widget ng-untouched ng-pristine ng-valid' aaname='Identyfikator (KRS, NIP lub inny identyfikator)' /&gt;" Guid="4f8ebaca-445f-4b69-8917-4d64e02cac1f" InformativeScreenshot="b806cd7ad5c7e0cc1e2ca62c88ab6ae5.png" IsResponsive="True" Reference="fZ-8QgXm3kuyfXKqy9Lojw/hBzmuZ7IS0yv3mQpmszkSw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Wyszukiwanie podmiotów' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="343, 777, 315, 18" CvTextArgument="Identyfikator (KRS, NIP lub inny identyfikator)" CvType="Text" DesignTimeRectangle="344, 776, 496, 25" ElementType="Text" FriendlyName="'Identyfikator (KRS,'" FullSelectorArgument="&lt;webctrl idx='2' tag='IFRAME' /&gt;&lt;webctrl aaname='Identyfikator (KRS, NIP lub inny identyfikator)' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl aaname='Identyfikator (KRS, NIP lub inny identyfikator)' tag='LABEL' type='' class='control-label' check:innerText='Identyfikator (KRS, NIP lub inny identyfikator)' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAfQAAAAdCAYAAABc6p50AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAv6SURBVHhe7Zz9h1tbF8eff/D8dAyhHEbj0ihRGsMdZaLEpTFMfqgMHeOR/nDz3KdSz0RdKSNDhcpQUypDhUoZqUsohwphPWvts89kv+WcM+lbkq4PYU7mnL3X3mev9d2v+RcwDMMwDLP2sKAzDMMwzAbAgs4wDMMwGwALOsMwDMNsACzoDMMwDLMBsKAzDMMwzAawhKBfQN0rQfuTvPzJjE+rUNjywPN8KJ9O5LcxY2jf96D+Rl4yq82nNpS8OrawG7DMM+vEmzp499vYkleDRH/b9HfBMCuOJujjkxJ4j9PccYUE/WMLCn4Vup/x79kUpvgZvGhA7yr699oI+uURBNsYCL9ElxePPSidGCE8xHrfDqD6Kgqi4l15FFjlZyuA4sMG9P8R/5aEMHxZg93Al/f5ENwrQ+tyKv+fTJRHCVrX9algCo0VzKmdKPbJvBvnZqdL4UcJejiA9r97MJ7J65/FVQ8aJwN8SwmskqCn+duqCfpsDK37Afp/Yg0zzMawOoKOopZLzVtn8gLtfdSDuTxNoPPAh8pZ7MDfQNCXsOtmjKB110ehngcdS9BJzG/72nfau8LAGn4aQmc/AG/7CAZSqCanZfC3K9C+HEP4OcTPGIav29D7EP0/DcrD933wd1BQTPHLJOjzdjINxzA4qUDgYYB9u6BD8aME/X0DAr8SCdNPJDyr4PtpwFBeO/lOgh5i27A6jSmk+ts3EPRl7ErkHfrvLbRJdpYZZpNZGUEfPs1nyFsn3d6vF/Rl7LoRGLD9W3MRJjRBx1FGewdHt2iDOs5wlv1zF8rKu6F0is+XD46UR+nPNtS3sTPxwkjnhoIeM3iSA++gL68MfpSgrxPfRdBD6FYcs0AppPrbV7+L5exKhjrMHuy+TJgZYpgNIVXQJ+dH11O2frALR+cdqBmBOnzfhurdHPg0tbpVgPJfKD7XAkWiive/H0DzYSG6x89B4VEbhkKhQuj9EU8Jx586vHq56wxkg2PMZ/9/8ALTyvnKM8JuU8DN6xAuDvPKiHMKo9Ma7N6Wtgu7uvJ/brvi2tHKrJVHQoGYRBjvq+DomqauXZ2gi8c+5I4H8ipiLuho7+PAEnMik6AfYtp4T7YJdps4jxDLEvhl6KoxcUlBF2kuEigjDfe9RrrimRp01HZ6q4Tt9AZT++Jd9WH8qgalW2pbV9KgZ9CW4bsmlO/E+RSgejKM3s1sAEf4rNV5FO+kAK2P8lrFrMPZBPpPdiGQa9TB70fQ/7tm1UGiv6XZCUNoivYYt2n83P8P/PeBS0ijMlV7Q+hk8TezXq2ZpSR/c9kVlzuE4UkVCvG70coTQT5DU+vDkwrkyU6lzkQ72utaPsQwm0ayoNPaLk2RvpaBbTqCTgUF0TcC6lYJmpfyngkKN44oC89G0bV0ev82Tf3O72ngd8HT+WQjOaSW95ceVH0zEOpB07LXDDDadSzmLRhddzbwjnd9GE6k5GH5Wni/Gtgsuwgqsx9A9WwMU0prOob+YVGfmqZgfacIxXt16H+k6e4wuldjBM3fPKi+0iU3EvRhZO/9lj3djVhlRxu6+0Fkg/wKrshOH/J/tODi6uayPs8jhP4BBuFHvXlQXFLQqQPjHxr1GWOkIfI3xMxKVzyDbWkfhUEWcXLZFO/n6DK6tjBtpbJgPRUPUdQpjdlUbP7KqdPy4hmqyzYM4mZ82cDvAmi8j65Hz7DDuq9OSWPNnZYdZZAYdTg4piUTbC+xu33oiM6gb9Zzkr9lsDP2C7WdT3tV8O+ib8hrAS03+VhPsv2l+ptar7GYP9dSTPE32y5i/KIE/nYVurINT6/6UC/qS1DkM4Ui+hu+wxEtL4XKW3hbxw6E2jYZZjNJFHQa4fkuMVMCKo2Y83/qTgvnOKqgaWRx4XZSM9DZwjmF3j4GJjVtsR42n55ODTDX11LMi/hsSjfdqgOHoItZArNezBEaBWtvFzoyqLohccpZwkN55rYDLCvm41eh57BZ2KmOZjCd0nEfJqb4fx5C+1E0uvLvVKH9Pvs4RauLkDpYOaidy+dvKujTCQxfVnGkX4TWojV8Iw2RvyWGLkG3Ow7OdxRj2ioEHa+1uqP3aYqVmU8I3T2lbdOmMQ/f1/V6La0xJ0z3anWI5cJOxbztRph1kOpvWeyUfqH5pOhA56GpvBtaHsk9mc8emb4Rp2MJuhTz4nHKhj9ET9MVKxbMfFAsUN6Z8NMHHaxxBwvaCMNsGgmC7nIuQg2o0T26sMSfOGAaTh9jCIJLOE0BFwFGmZ5ODTBxGXawh6+NUGJCGJ01oHwvL6Y5/SAPeZrWU9K07VpUL9gBeaR8bwqeE0OcJELQ9zo4Mg8xTfemNNe7KpiBXmU2EZvS8iga9vE+N2b9ik12t2rQpyidSdDV9kBTyDXoJHUojDRE/lYdGnVm5RuRODI2n3G+K6MtLciH3tW8LRgCPunArldevPlOzVek7xAdzbbIJt3P4o+0LZOd7jasCbjooOqdzVR/k2Uo7aAP0WY/s3OZ6m8OuxbVC3VAlO/18hksSoNhNoxvIugLHUlgOH2MEURt4SRoSlr2zmeYrzGCSA0w8jqg9dGzqjV9TVOk3p0juIinABEzTduuRWVeVtD1MhFacBLH1fTpRcIquxixuEfzKuI57CBkkXRn/dIGvcMLmJrls4TEEN4sGGmI/K06NNK18o34OYKOreBV9TotYb+2K9xAzVek76gvzbZFbU8hk50L0vnQxA4fPks+gvn6vzW1KXhne7DqKID6+Ri62BEtGRsy0/3NYdeiemFBZxiL1Cl3dcpNIEYdc+egKUCvkrThxHD6GCOI2sIZIdYl6XsKMMYaX2qA0a7NDWaO4CFFWasDh12Zp9wtkTBJWkOfPzl9W4fAK6R0ZibQ3UOxNTbYmQihW1rQEbEuH8DRX9iBUMtnCcnXC7o4JmXWoRmcFwRrGm3eaMrdeldGW7LKF2EJiZi6JnvoedpQtlDOjXyxvnwcEb8TF9dMjM2hqf6WyU5X2yeiI5RUZtrrMN8HE5Hqb2reoiOqngHP4m+ue7JPudvlkdBeAEedMMymkb4pDoPT9QYcsfHKsSnO92H32QBEx1ueie6+iYOB4fQxRhAVeeMIWmxYU6fqqAPh16B+kGGUauVlXMvRbnzmW2zQekhT23hBG6FwFE9T0mqaTrtEmZVNcbMJXBwXscOBI5r4nkyCHtmweJf7nPFztEP58Rm77IjYxBi/G+zAnHZgQBvywilMv4QwvmxDRT2CRjYmTAk780CELVhP1mYtLWh+vaCL8+KYRiOepv8yEhv/tBMDsv3lKx0YSe1calOc9a6MtmOVL8L1rqgzUXpcRxvw/rg9uDDypU1x/k7zejPb9KoLVdemuCR/y2inaHcH/Wh3vGIjdSD8gzrUVB+XpPqbkXd0OmI+a5TF31x2mZviYHIBR0XscChLTEmCLuzmXe7ML0CyoCP2sbULaNExNNXZP3ah9jsGI7me5wdFKP99M0GnX+9q7OCoitLYijfUEbIX79hglhpgXHnLTkqbft1KzRNHR6UnfRi/rulpLrKLyqw86zy2ZomEjdhdnHQOPcY4j+4WW7nmLnajo6Af70ZrlGSjh4HyNr6/1/N0x8+LiTa680BmI2jexTRNodGE5BsIOpZBO66E7a/xdqi3P3pmrwNDtZ0uc2zNqodksYpxviuaukY7rNktEzNf17G1ty1xDE3LIcnfstpJnYX4WJu6mUxMZWO6jg1mqf7myDvqpKD91L6z+NsCu0ZnypHCBcfW3IIe2cjn0JlfAU3QVxUhPJvawxbiqP9S3I+if8CB7rsw60PNcXphPRhDq+hB+XRDvE1srMVOBv9SHPMLsAaCLn8aNWktct2hWQNlOv3HQOv3acfqmGVwnuleF+Tvtc+P3q0x/FvuzC/Gagv6bAqj57R+pk9JM8zKMumLfRpZjwauFPRDL7Ssk7KxkmGY1WRlBV2s19F62R3aDCO/ZJiVhfYMyLXhp+k/qLJaROvMtG4//ylWhmHWjbVYQ2cYhmEYJhkWdIZhGIbZAFjQGYZhGGYDYEFnGIZhmA2ABZ1hGIZhNgAWdIZhGIbZAFjQGYZhGGbtAfg/XEH1Qe1CF6kAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Wyszukaj'" sap:VirtualizedContainerService.HintSize="1211.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://krz-rejpub-gui-krz-pub-prod.apps.ocp.prod.ms.gov.pl/#/rejestr-krz?_viewpath=KrzRejPubGui.WyszukiwaniePodmiotow&amp;_timestamp=1699183059711" ContentHash="BoFZjWPDqEiI-3HtzUhDOg" CvElementArea="1770, 749, 116, 43" CvTextArea="1790, 761, 77, 21" CvTextArgument="Wyszukaj" CvType="Button" DesignTimeRectangle="1775, 752, 111, 38" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Wyszukaj'" FullSelectorArgument="&lt;webctrl idx='2' tag='IFRAME' /&gt;&lt;webctrl parentid='butoonWyszukajMobile' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl parentid='butoonWyszukajMobile' tag='SPAN' type='' class='ui-button-text ui-clickable' aaname='Wyszukaj' check:innerText='Wyszukaj' /&gt;" Guid="e474ea86-45ce-4091-a171-6c431522d432" InformativeScreenshot="6cdfe47d6d20d7f38a2e77a4686c5169.png" Reference="fZ-8QgXm3kuyfXKqy9Lojw/vH3NTS3KmEeIlrfFBI8LZA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Wyszukiwanie podmiotów' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvElementArea="1770, 749, 116, 43" CvTextArea="1790, 761, 77, 21" CvTextArgument="Wyszukaj" CvType="Button" DesignTimeRectangle="1774, 751, 113, 40" ElementType="Button" FriendlyName="'Wyszukaj'" FullSelectorArgument="&lt;webctrl idx='2' tag='IFRAME' /&gt;&lt;webctrl id='butoonWyszukajMobile' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl id='butoonWyszukajMobile' tag='BUTTON' type='button' class='ds-button primary button buttonsMobile ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only' aaname='Wyszukaj' check:innerText='Wyszukaj' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHUAAAAsCAYAAABbhfeDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAATgSURBVHhe7Zy/axtJFMf1p6i+5v4El+6vcOvyUKPqSBfiIuAmyJAiAUMQhMiBgzgohQ5CLAeDhYTD2ojIREKWjczqhG3ZyGZZdAhe3puZtzsrrZPYlkCam+Jb7Mzs7M77zPsxEmzC8zywMksWqoEKoO7V/4Xf0h8g8UfOas5E3IjfGFQJ9M3YDVbzoDeC3xjU+MFW8yQL1UBZqAbKQjVQFqqBslANlIVqoCxUA2WhGigL1UBZqAbKQr2DXpwAeP8NoPAqvv/X5UDhAufy+vBiJa7/YZoy1F3YPCND+LC5Fu17UhtiO/Y1DiPtiVQTHGq/PocnevsMaHJQy9Iu3iWspuL6H6YpQ81Ben8g4NW28lr7ntypBO+qC2ltfOLtOfSo/aipjZ8NTQ7qdDV1qIn3lwJer/Y1bFtpQ43A+WSkqBcvlX25CXY+heNnRBYqK3UsAV504U/VlvzYF+CcqvTKEGAesqfKcOs5WK5IwJ19J5yPpDaKd3oMC3i9+M4F50KFc5I3gFatCUs09lUXOtweEeYzMZ8K98G1Et93EkaMcajb2Caf2/riQFK0lSGz34fOtfY+VzdQeLcdzCNy6lXMMyek6UMN8uoNbKiiYLVB1+ihzxVwNJw0yCGUyHs5n6650BJGiYZozse1z7gZVtQc6PalyjFkd7pQcgfQa9TlnCsOZLawnVW9kYbGTSbnvC/Ubcg0ZGqhTSffn/QJN+YQOu4lFHbweRUELOan9fKYuYca5tXSe7r+CsVrXJAApYD7WDDQ2HVlyCCfkoFo8bp3qPvJIFRksPGPFMQfSlWdNF+Wc/x9oOaDNfWwf1G/L0a8CZ2P3GYAVA6XIowq7+McK40zhOLbHCzsSC/S82nyg8rJ1QPZxoUUe2IKvdsjA6Eu+rDxdxl+V/dGFYKIetZdofpQKPflO2D4/xlQEj/XLKhcGLltWFbgpNeiFKTOlz0VltETMJ8G96bqQUh+hNe864P7Uclnh1BwtRzmjeYwHJNVkIKwy7orVE001+iRJLU3nlOVzIKqhdmiAIeLCYyh8uhpVy405nz6qEoGQm/OHcjQe8sZNvnYgew3X3oRPivDz0ixEfUwzroFKm+CGKidRhPBqfCLESeaT9WYIxcyr3dhaW0XVmsmeipKetgQegTlzJWVqVBeGutqEBhxLDcqr+kcyaIjCMWx0ipoATAMu61yeWQsiQ3sw8ZTbgvvic+peE0bReTnIcLiqBC3QfKw+k16rXFQE//IYwxp9IjCuZQUfz5Vv8CIMeSxWh8Cb137eDxyRXW7sX8jN4cK10nOwRSS9Sp4qw5pUY2j0RsqVOLRo1hxoYjVszxDo26DSm3PVXVOP/eJDRG+J3lqdqsNhZNwLvOgcl5VRVGkj48useFRKgCPXr6s9601oaSfUVGd7jlknsnqNvC4MWnP+usANgkk92HBlX2pPPFHUFGL/F5YL1DRlHx5jGdmNQ+qc9KG9FO5dvOgPlALn6XxWpW4EDpvslBRbATMeyN/DMyn/s9Qc21wsDhyzmR4jVaacyhMFUVaD4f6SME4Oc02VC6u/CG0qvVfOujPtNaxduACTORt/Z+ryWm2oVrdSxaqgbJQDZSFaqAsVANloRooC9VAjUG133yYZ93yzQf7dZb5FXGL/TqLlTmyUA2UhWqcPPgOgwIGF6lzgpMAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NCheckState DisplayName="Check App State 'Brak Wyników'" sap:VirtualizedContainerService.HintSize="1211.2,1822.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="44f9ccc4-3268-4fc1-989b-ea7ff2c872a3" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="540.8,541.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message - not found" sap:VirtualizedContainerService.HintSize="478.4,144" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Brak postępowań dla spolki o numerze KRS &quot; + in_str_NumerKRS]" />
+                  <ui:MultipleAssign DisplayName="Multiple Assign - Brak postepowan" sap:VirtualizedContainerService.HintSize="478.4,242.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                    <ui:MultipleAssign.AssignOperations>
+                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:Object">[io_dt_KRZ.rows(int_CurrentInputRowKRZ)("Rodzaj postępowania")]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:Object">["Brak postępowań"]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:Object">[io_dt_KRZ.rows(int_CurrentInputRowKRZ)("Sygnatura")]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:Object">["Brak postępowań"]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:Object">[io_dt_KRZ.rows(int_CurrentInputRowKRZ)("Data rejestracji")]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:Object">["Brak postępowań"]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:Object">[io_dt_KRZ.rows(int_CurrentInputRowKRZ)("Data zakończenia")]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:Object">["Brak postępowań"]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:Object">[io_dt_KRZ.rows(int_CurrentInputRowKRZ)("Status")]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:Object">["Brak postępowań"]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                      </scg:List>
+                    </ui:MultipleAssign.AssignOperations>
+                  </ui:MultipleAssign>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="617.6,1604" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="KRZ\TableExtraction_Cleanse.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="555.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="KRZ\TableExtraction_Cleanse.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InOutArgument x:TypeArguments="ui:Browser" x:Key="br_Chrome">[br_Chrome]</InOutArgument>
+                      <OutArgument x:TypeArguments="sd:DataTable" x:Key="dt_Postepowania">[dt_Postępowania]</OutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_str_NumerKRS">[in_str_NumerKRS]</InArgument>
+                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                  <If Condition="[dt_Postępowania.RowCount&gt;1]" DisplayName="If - liczba postepowan &gt; 1" sap:VirtualizedContainerService.HintSize="555.2,1335.2" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="377.6,636" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message - Liczba postepowan" sap:VirtualizedContainerService.HintSize="334.4,144" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Znaleziono &quot; + Cstr(dt_Postępowania.RowCount) +&quot; postepowania dla KRS &quot; + in_str_NumerKRS]" />
+                        <ui:RemoveDataRow Row="{x:Null}" DataTable="[io_dt_KRZ]" DisplayName="Usun wiersz KRZ - do uzupelnienia sciagnietymi postepowaniami" sap:VirtualizedContainerService.HintSize="334.4,188" sap2010:WorkflowViewState.IdRef="RemoveDataRow_1" RowIndex="[int_CurrentInputRowKRZ]" />
+                        <ui:MergeDataTable Destination="[io_dt_KRZ]" DisplayName="Dodaj znalezione postepowania do tabeli KRZ" sap:VirtualizedContainerService.HintSize="334.4,134.4" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Ignore" Source="[dt_Postępowania]" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="521.6,516" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message - Liczba postepowan" sap:VirtualizedContainerService.HintSize="478.4,144" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Znaleziono 1 postepowanie dla KRS &quot; + in_str_NumerKRS]" />
+                        <ui:MultipleAssign DisplayName="Multiple Assign - Zapisz dane o postepowaniu" sap:VirtualizedContainerService.HintSize="478.4,242.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                          <ui:MultipleAssign.AssignOperations>
+                            <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:Object">[io_dt_KRZ.rows(int_CurrentInputRowKRZ)("Rodzaj postępowania")]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:Object">[dt_Postępowania.Rows(0)("Rodzaj postępowania").ToString]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:Object">[io_dt_KRZ.rows(int_CurrentInputRowKRZ)("Sygnatura")]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:Object">[dt_Postępowania.Rows(0)("Sygnatura").ToString]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:Object">[io_dt_KRZ.rows(int_CurrentInputRowKRZ)("Data rejestracji")]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:Object">[dt_Postępowania.Rows(0)("Data rejestracji").ToString]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:Object">[io_dt_KRZ.rows(int_CurrentInputRowKRZ)("Data zakończenia")]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:Object">[dt_Postępowania.Rows(0)("Data zakończenia").ToString]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:Object">[io_dt_KRZ.rows(int_CurrentInputRowKRZ)("Status")]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:Object">[dt_Postępowania.Rows(0)("Status").ToString]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                            </scg:List>
+                          </ui:MultipleAssign.AssignOperations>
+                        </ui:MultipleAssign>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://krz-rejpub-gui-krz-pub-prod.apps.ocp.prod.ms.gov.pl/#/rejestr-krz?_viewpath=KrzRejPubGui.WyszukiwaniePodmiotow&amp;_timestamp=1699183059711" ContentHash="ig9ux2AFmkix9YjY1co1sA" DesignTimeRectangle="334, 842, 40, 25" DesignTimeScaleFactor="1.25" FriendlyName="'Brak Wyników'" FullSelectorArgument="&lt;webctrl idx='2' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;app-rejestr-krz-view&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p-messages&amp;gt;div&amp;gt;span' isleaf='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl type='' isleaf='1' tag='SPAN' class='ui-messages-icon pi ng-tns-c61-7 pi-exclamation-triangle' aaname='' /&gt;" Guid="9798cd98-929b-4280-aa6d-50cfb899013b" InformativeScreenshot="a9895d06082a400512ac9686115ccf2e.png" Reference="fZ-8QgXm3kuyfXKqy9Lojw/wji1M5KTC06FwlAydxzGGw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Wyszukiwanie podmiotów' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <uix:NGoToUrl DelayAfter="5" DisplayName="Go To URL - https://prs.ms.gov.pl/" sap:VirtualizedContainerService.HintSize="1211.2,82.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[in_Config(&quot;PRS_URL&quot;).ToString]" Version="V3" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

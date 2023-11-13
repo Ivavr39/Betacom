@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="bdoNkA9SgE2tw_WuvdaAMw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://krz.ms.gov.pl/#!/application/KRZPortalPUB/1.9/KrzPortalPubGui.StronaGlowna?params=JTdCJTdE&amp;itemId=item-0&amp;seq=0" CvTextArea="776, 712, 228, 22" CvTextArgument="Wyszukiwanie podmiotow" CvType="Text" DesignTimeRectangle="776, 711, 228, 23" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Wyszukiwanie podmiotow'" Guid="8c7fe1f9-f256-4cf8-902f-e707900fef66" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Strona główna' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CvTextArea="776, 742, 234, 22" CvTextArgument="i przegladanie postepowan" CvType="Text" DesignTimeRectangle="776, 742, 233, 22" ElementType="Text" FriendlyName="'i przegladanie'" SearchSteps="CV" TargetType="ComputerVisionBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="782edf770b84b480a33869202d59864c.png" xmlns="">0FuCmxtACOUmMO5alFFg-Sw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

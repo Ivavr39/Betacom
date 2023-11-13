@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Krajowy Rejestr Sądowy",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "ZzkDu_dqnE20YHX-B_sxww",
+  "Reference": "fZ-8QgXm3kuyfXKqy9Lojw/ZzkDu_dqnE20YHX-B_sxww",
+  "ParentRef": "fZ-8QgXm3kuyfXKqy9Lojw/8AUvLdrpLUuxJTEixborEA",
+  "Created": "2023-11-04T13:53:30.6188841Z",
+  "Updated": "2023-11-04T13:53:30.6188841Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

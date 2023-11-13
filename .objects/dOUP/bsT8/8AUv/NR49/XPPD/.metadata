@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Portal Publiczny",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "XPPDb9HFwE6-jaR0Uxt2Cw",
+  "Reference": "fZ-8QgXm3kuyfXKqy9Lojw/XPPDb9HFwE6-jaR0Uxt2Cw",
+  "ParentRef": "fZ-8QgXm3kuyfXKqy9Lojw/NR49y-aAQEm9Shey71Dq4Q",
+  "Created": "2023-11-05T11:15:27.4164569Z",
+  "Updated": "2023-11-05T11:15:48.8064619Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myData");
+      tr = table.getElementsByTagName("tr");
+    
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 2; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    </script>
+<body style="text-align:center">
+  <h2>Raport za *timestamp*</h2> 
+  <table id="myData" style="border-collapse: collapse; width: 100%;">
+  <input style="font-size: 16px; padding: 12px 20px 12px 40px; border: 1px solid #ddd;  margin-bottom: 12px;" type="text" id="myInput" onkeyup="myFunction()" placeholder="Wyszukaj numer KRS">
+    <tr>
+      <td style="border: none;"></td>
+      <th colspan="5" style="background-color: #3498db; padding: 10px; border-style: solid;">KRS</th>
+      <th colspan="5" style="background-color: #27ae60; padding: 10px; border-style: solid;">KRZ</th>
+      <td colspan="2" style="border: none;"></td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; background-color: #d2d5d7; border-style: solid;">Numer KRS</td>
+      <td style="padding: 10px; background-color: #3498db; border-style: solid;">Nazwa</td>
+      <td style="padding: 10px; background-color: #3498db; border-style: solid;">NIP</td>
+      <td style="padding: 10px; background-color: #3498db; border-style: solid;">REGON</td>
+      <td style="padding: 10px; background-color: #3498db; border-style: solid;">Forma prawna</td>
+      <td style="padding: 10px; background-color: #3498db; border-style: solid;">Data wpisu</td>
+      <td style="padding: 10px; background-color: #27ae60; border-style: solid;">Rodzaj postępowania</td>
+      <td style="padding: 10px; background-color: #27ae60; border-style: solid;">Sygnatura</td>
+      <td style="padding: 10px; background-color: #27ae60; border-style: solid;">Data rejestracji</td>
+      <td style="padding: 10px; background-color: #27ae60; border-style: solid;">Data zakończenia</td>
+      <td style="padding: 10px; background-color: #27ae60; border-style: solid;">Status</td>
+      <td style="padding: 10px; background-color: #d2d5d7; border-style: solid;">Status techniczny</td>
+    </tr>
+  </table>
+</body>
+</html>

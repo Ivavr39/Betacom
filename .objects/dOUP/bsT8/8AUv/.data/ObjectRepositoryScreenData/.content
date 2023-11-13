@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="ynMl1WJfoUy24RtTrR7X0A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAWtJREFUWEftkzFLw0AUx/sR/Aj9CAW/QD+Agmu3Tp0LTp1adC3oJHSKk7gJcS100qmQOVNAiYuBQEB0O/O79qWXy9AEDHG4Pzzy3r3Lvd+7l/RUx3IADsABOID/A5B8KRV+HizO9omWVQBQcBsfLEp369FHojbbsGSm7Fya5Z0Y4n3Pf1VPm0D7to4CLFa+6p1OSjYYXelCUZxUcv3zmQrC99K7J8OpNvx7/0XnRLUBhP7mYa3j2/wpAOxB7CG+uLzTMUWBRQD3z2baTDUGCMI3HU+XjxUARNHhZKn9wehax3bXpmoDUBCfw4m9/FABoMvx3CvlENB0zBqjMUFFtQHk+ijCGJAAyDo+ILb4OMcLT+dlPKLGIzBljwAIrpx5MyrAzK4ZCWum/hSATs1YvgHGh5FrfAP8w3Rm/98IAHLsEXHVUgRoCrMHm6+eK+ccBWhbBUD2s4MQS7/3iZZVAHQlB+AAHIAD6BhAqV9mkxTP4nP+QQAAAABJRU5ErkJggg==" Selector="&lt;html app='chrome.exe' title='Portal Rejestrów Sądowych' /&gt;" Title="Portal Rejestrów Sądowych" Url="https://prs.ms.gov.pl/">
+      <imageRef attrName="InformativeScreenshot" originalValue="428b3f192c1951f0b9631306c1cd3ecc.jpg" xmlns="">06FSEWxFlg0CYhKkTXJ-emw</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

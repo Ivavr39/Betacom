@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Wyszukiwanie Podmiotów",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "SMt9pmAYTUu649m8hpQdtw",
+  "Reference": "fZ-8QgXm3kuyfXKqy9Lojw/SMt9pmAYTUu649m8hpQdtw",
+  "ParentRef": "fZ-8QgXm3kuyfXKqy9Lojw/NR49y-aAQEm9Shey71Dq4Q",
+  "Created": "2023-11-05T11:17:09.9425196Z",
+  "Updated": "2023-11-05T11:17:30.7767021Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

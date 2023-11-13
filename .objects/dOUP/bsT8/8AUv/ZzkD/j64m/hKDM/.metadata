@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Pobierz JSON",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "hKDMu1tXg06LLuruO1bY1Q",
+  "Reference": "fZ-8QgXm3kuyfXKqy9Lojw/hKDMu1tXg06LLuruO1bY1Q",
+  "ParentRef": "fZ-8QgXm3kuyfXKqy9Lojw/j64mQec_Ok2RGfIKpc0fiA",
+  "Created": "2023-11-04T17:10:55.7649297Z",
+  "Updated": "2023-11-04T17:35:13.489542Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

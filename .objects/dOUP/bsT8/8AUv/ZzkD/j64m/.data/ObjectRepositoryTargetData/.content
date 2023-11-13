@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="xL8fp-JIskSkd5-NyCJDKg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://prs.ms.gov.pl/krs" CvTextArea="1265, 498, 207, 27" CvTextArgument="Wyszukiwarka KRS" CvType="Text" DesignTimeRectangle="1268, 496, 380, 30" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Wyszukiwarka KRS'" FullSelectorArgument="&lt;webctrl idx='6' tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='H2' class='' aaname='Wyszukiwarka KRS' check:innerText='Wyszukiwarka KRS' /&gt;" Guid="f84e8a77-9f02-4b96-8117-78b05f64a8aa" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal Rejestrów Sądowych' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="5b6d5b4568c7775929e91eb668828f85.png" xmlns="">0ffA-_NIJJ0SYEExPRsYdZQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

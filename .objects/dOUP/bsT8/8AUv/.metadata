@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Chrome: Portal Rejestrów Sądowych - Start",
+  "Description": "Strona Główna",
+  "Type": "Screen",
+  "Id": "8AUvLdrpLUuxJTEixborEA",
+  "Reference": "fZ-8QgXm3kuyfXKqy9Lojw/8AUvLdrpLUuxJTEixborEA",
+  "ParentRef": "fZ-8QgXm3kuyfXKqy9Lojw/bsT8dm-1YUa3Uq3oXOxyGw",
+  "Created": "2023-11-04T13:53:23.2911195Z",
+  "Updated": "2023-11-04T13:55:50.9108808Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

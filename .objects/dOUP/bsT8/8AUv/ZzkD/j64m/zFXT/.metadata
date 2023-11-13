@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Wyszukaj",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "zFXT3GP0EUWVp8_owghLkQ",
+  "Reference": "fZ-8QgXm3kuyfXKqy9Lojw/zFXT3GP0EUWVp8_owghLkQ",
+  "ParentRef": "fZ-8QgXm3kuyfXKqy9Lojw/j64mQec_Ok2RGfIKpc0fiA",
+  "Created": "2023-11-04T14:00:42.7501819Z",
+  "Updated": "2023-11-04T14:01:00.1853612Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

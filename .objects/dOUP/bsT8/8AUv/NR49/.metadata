@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Krajowy Rejestr Zadłużonych",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "NR49y-aAQEm9Shey71Dq4Q",
+  "Reference": "fZ-8QgXm3kuyfXKqy9Lojw/NR49y-aAQEm9Shey71Dq4Q",
+  "ParentRef": "fZ-8QgXm3kuyfXKqy9Lojw/8AUvLdrpLUuxJTEixborEA",
+  "Created": "2023-11-04T13:53:23.3864942Z",
+  "Updated": "2023-11-04T13:55:15.1665532Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Wyniki Wyszukiwania - Brak Danych",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "5MNRJ1KgTUaRrvUd5xASmQ",
+  "Reference": "fZ-8QgXm3kuyfXKqy9Lojw/5MNRJ1KgTUaRrvUd5xASmQ",
+  "ParentRef": "fZ-8QgXm3kuyfXKqy9Lojw/j64mQec_Ok2RGfIKpc0fiA",
+  "Created": "2023-11-04T15:04:20.1808099Z",
+  "Updated": "2023-11-04T15:27:21.5557981Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

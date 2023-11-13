@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Rodzaj Rejestru - Przedsiębiorcy",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "jmnG4Y0xmEKqaubho_wDtA",
+  "Reference": "fZ-8QgXm3kuyfXKqy9Lojw/jmnG4Y0xmEKqaubho_wDtA",
+  "ParentRef": "fZ-8QgXm3kuyfXKqy9Lojw/j64mQec_Ok2RGfIKpc0fiA",
+  "Created": "2023-11-04T13:58:33.9121379Z",
+  "Updated": "2023-11-04T13:58:55.3695708Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
