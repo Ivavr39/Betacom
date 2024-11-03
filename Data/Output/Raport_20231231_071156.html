@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myData");
+      tr = table.getElementsByTagName("tr");
+    
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 2; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    </script>
+<body style="text-align:center">
+  <h2>Raport za 31 grudnia 2023 07:11:56</h2> 
+  <table id="myData" style="border-collapse: collapse; width: 100%;">
+  <input style="font-size: 16px; padding: 12px 20px 12px 40px; border: 1px solid #ddd;  margin-bottom: 12px;" type="text" id="myInput" onkeyup="myFunction()" placeholder="Wyszukaj numer KRS">
+    <tr>
+      <td style="border: none;"></td>
+      <th colspan="5" style="background-color: #3498db; padding: 10px; border-style: solid;">KRS</th>
+      <th colspan="5" style="background-color: #27ae60; padding: 10px; border-style: solid;">KRZ</th>
+      <td colspan="2" style="border: none;"></td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; background-color: #d2d5d7; border-style: solid;">Numer KRS</td>
+      <td style="padding: 10px; background-color: #3498db; border-style: solid;">Nazwa</td>
+      <td style="padding: 10px; background-color: #3498db; border-style: solid;">NIP</td>
+      <td style="padding: 10px; background-color: #3498db; border-style: solid;">REGON</td>
+      <td style="padding: 10px; background-color: #3498db; border-style: solid;">Forma prawna</td>
+      <td style="padding: 10px; background-color: #3498db; border-style: solid;">Data wpisu</td>
+      <td style="padding: 10px; background-color: #27ae60; border-style: solid;">Rodzaj postępowania</td>
+      <td style="padding: 10px; background-color: #27ae60; border-style: solid;">Sygnatura</td>
+      <td style="padding: 10px; background-color: #27ae60; border-style: solid;">Data rejestracji</td>
+      <td style="padding: 10px; background-color: #27ae60; border-style: solid;">Data zakończenia</td>
+      <td style="padding: 10px; background-color: #27ae60; border-style: solid;">Status</td>
+      <td style="padding: 10px; background-color: #d2d5d7; border-style: solid;">Status techniczny</td>
+     <tr>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #d2d5d7">0000419268</td>
+      <td style="padding: 5px; text-align: center; border-style: solid; background-color: #b8e3ff;">KASTEL GREETINGS SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ W UPADŁOŚCI</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #b8e3ff;">7532430615</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #b8e3ff;">16146722700000</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #b8e3ff;">SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #b8e3ff;">14.06.2012</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">postępowanie o ogłoszenie upadłości przedsiębiorcy</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">
+OP1O/GU/29/2022</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">27.01.2022</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">05.10.2022</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">zakończone</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #d2d5d7;">Success</td>
+    </tr> <tr>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #d2d5d7">0000419268</td>
+      <td style="padding: 5px; text-align: center; border-style: solid; background-color: #b8e3ff;">KASTEL GREETINGS SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ W UPADŁOŚCI</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #b8e3ff;">7532430615</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #b8e3ff;">16146722700000</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #b8e3ff;">SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #b8e3ff;">14.06.2012</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">postępowanie upadłościowe dla przedsiębiorcy</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">
+OP1O/GUp/4/2022</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">05.10.2022</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">05.10.2022</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">w toku</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #d2d5d7;">Success</td>
+    </tr> <tr>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #d2d5d7">0005395231</td>
+      <td style="padding: 5px; text-align: center; border-style: solid; background-color: #b8e3ff;">Nie istnieje</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #b8e3ff;">Nie istnieje</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #b8e3ff;">Nie istnieje</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #b8e3ff;">Nie istnieje</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #b8e3ff;">Nie istnieje</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">Nie istnieje</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">Nie istnieje</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">Nie istnieje</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">Nie istnieje</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">Nie istnieje</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #d2d5d7;">Success</td>
+    </tr> <tr>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #d2d5d7">0000142065</td>
+      <td style="padding: 5px; text-align: center; border-style: solid; background-color: #b8e3ff;">BETACOM SPÓŁKA AKCYJNA</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #b8e3ff;">5271022097</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #b8e3ff;">01096392000000</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #b8e3ff;">SPÓŁKA AKCYJNA</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #b8e3ff;">11.12.2002</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">Brak postępowań</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">Brak postępowań</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">Brak postępowań</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">Brak postępowań</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">Brak postępowań</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #d2d5d7;">Success</td>
+    </tr> <tr>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #d2d5d7">0000951450</td>
+      <td style="padding: 5px; text-align: center; border-style: solid; background-color: #b8e3ff;">UIPATH POLAND SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #b8e3ff;">5252895298</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #b8e3ff;">52121249200000</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #b8e3ff;">SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #b8e3ff;">09.02.2022</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">Brak postępowań</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">Brak postępowań</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">Brak postępowań</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">Brak postępowań</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: rgb(201, 255, 223);">Brak postępowań</td>
+      <td style="padding: 5px; text-align: center;border-style: solid; background-color: #d2d5d7;">Success</td>
+    </tr></tr>
+  </table>
+</body>
+</html>

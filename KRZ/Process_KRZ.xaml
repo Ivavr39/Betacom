@@ -264,10 +264,18 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="KRZ\TableExtraction_Cleanse.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="555.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="KRZ\TableExtraction_Cleanse.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InOutArgument x:TypeArguments="ui:Browser" x:Key="br_Chrome">[br_Chrome]</InOutArgument>
-                      <OutArgument x:TypeArguments="sd:DataTable" x:Key="dt_Postepowania">[dt_Postępowania]</OutArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_str_NumerKRS">[in_str_NumerKRS]</InArgument>
-                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                      <InOutArgument x:TypeArguments="ui:Browser" x:Key="br_Chrome">
+                        <VisualBasicReference x:TypeArguments="ui:Browser" ExpressionText="br_Chrome" />
+                      </InOutArgument>
+                      <OutArgument x:TypeArguments="sd:DataTable" x:Key="dt_Postepowania">
+                        <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_Postępowania" />
+                      </OutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_str_NumerKRS">
+                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_str_NumerKRS" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+                        <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+                      </InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <If Condition="[dt_Postępowania.RowCount&gt;1]" DisplayName="If - liczba postepowan &gt; 1" sap:VirtualizedContainerService.HintSize="555.2,1335.2" sap2010:WorkflowViewState.IdRef="If_1">

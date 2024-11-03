@@ -141,24 +141,12 @@
     <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="433.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Rozpoczynam procesowanie numeru KRS &quot; + in_str_NumerKRS]" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="KRS\Process_KRS.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="KRS\Process_KRS.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InOutArgument x:TypeArguments="ui:Browser" x:Key="br_Chrome">
-          <VisualBasicReference x:TypeArguments="ui:Browser" ExpressionText="br_Chrome" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_KRS">
-          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="io_dt_KRS" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_TransactionItem">
-          <VisualBasicReference x:TypeArguments="sd:DataRow" ExpressionText="in_TransactionItem" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_KRZ">
-          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="io_dt_KRZ" />
-        </InOutArgument>
-        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
-          <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_str_NumerKRS">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_str_NumerKRS" />
-        </InArgument>
+        <InOutArgument x:TypeArguments="ui:Browser" x:Key="br_Chrome">[br_Chrome]</InOutArgument>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_KRS">[io_dt_KRS]</InOutArgument>
+        <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_TransactionItem">[in_TransactionItem]</InOutArgument>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_KRZ">[io_dt_KRZ]</InOutArgument>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_str_NumerKRS">[in_str_NumerKRS]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="KRZ\Process_KRZ.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="KRZ\Process_KRZ.xaml">

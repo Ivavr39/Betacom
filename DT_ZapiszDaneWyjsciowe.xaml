@@ -138,6 +138,8 @@
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
       <AssemblyReference>System.Windows.Forms.Primitives</AssemblyReference>
       <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="DT_ZapiszDaneWyjściowe" sap:VirtualizedContainerService.HintSize="726.4,3542.4" sap2010:WorkflowViewState.IdRef="Sequence_1">

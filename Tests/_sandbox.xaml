@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_sandbox" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1410.4,1573.6" sap2010:WorkflowViewState.IdRef="_sandbox_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_sandbox" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="2434,993" sap2010:WorkflowViewState.IdRef="_sandbox_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -51,6 +51,9 @@
       <x:String>UiPath.Mail.Activities.Business</x:String>
       <x:String>UiPath.Mail.Activities</x:String>
       <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -123,110 +126,41 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_sandbox" sap:VirtualizedContainerService.HintSize="572.8,1508.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="496,900" sap2010:WorkflowViewState.IdRef="Sequence_14">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="str_JSONAsString" />
-      <Variable x:TypeArguments="njl:JObject" Name="jobj_DaneKRS" />
-      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtKRS" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtKRZ" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtJoined" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dt_TransactionData" />
-      <Variable x:TypeArguments="scg:List(x:String)" Name="lst_Headers" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dt_OutputTemplate" />
-      <Variable x:TypeArguments="x:String" Name="str_Text" />
-      <Variable x:TypeArguments="x:String" Name="HTML_Content" />
-      <Variable x:TypeArguments="x:String" Name="str_HTML_Content" />
-      <Variable x:TypeArguments="x:String" Name="str_HTML" />
-      <Variable x:TypeArguments="x:String" Name="str_HTMLRow" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dt_Joined" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt1" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt2" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadTextFile File="{x:Null}" Content="[str_HTML]" DisplayName="Read Text File" FileName=".data/index.html" sap:VirtualizedContainerService.HintSize="510.4,80.8" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-    <ui:ReadRange Range="{x:Null}" AddHeaders="False" DataTable="[dt_Joined]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="510.4,88" sap2010:WorkflowViewState.IdRef="ReadRange_5" PreserveFormat="True" SheetName="Dane" WorkbookPath="C:\Users\user\Documents\UiPath\Betacom_Recruitment_Assignment\Data\Temp\Output.xlsx" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_Joined]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510.4,605.6" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
-      <ui:ForEachRow.Body>
-        <ActivityAction x:TypeArguments="sd:DataRow">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476.8,417.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="433.6,83.2" sap2010:WorkflowViewState.IdRef="Assign_2">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:String">[str_HTMLRow]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:String" xml:space="preserve">["&lt;tr&gt;&lt;td style=""border: 1px solid black; padding: 5px; text-align: center;""&gt;Value0&lt;/td&gt;
-&lt;td style=""border: 1px solid black; padding: 5px; text-align: center;""&gt;Value1&lt;/td&gt;
-&lt;td style=""border: 1px solid black; padding: 5px; text-align: center;""&gt;Value2&lt;/td&gt;
-&lt;td style=""border: 1px solid black; padding: 5px; text-align: center;""&gt;Value3&lt;/td&gt;
-&lt;td style=""border: 1px solid black; padding: 5px; text-align: center;""&gt;Value4&lt;/td&gt;
-&lt;td style=""border: 1px solid black; padding: 5px; text-align: center;""&gt;Value5&lt;/td&gt;
-&lt;td style=""border: 1px solid black; padding: 5px; text-align: center;""&gt;Value6&lt;/td&gt;
-&lt;td style=""border: 1px solid black; padding: 5px; text-align: center;""&gt;Value7&lt;/td&gt;
-&lt;td style=""border: 1px solid black; padding: 5px; text-align: center;""&gt;Value8&lt;/td&gt;
-&lt;td style=""border: 1px solid black; padding: 5px; text-align: center;""&gt;Value9&lt;/td&gt;
-&lt;td style=""border: 1px solid black; padding: 5px; text-align: center;""&gt;Value10&lt;/td&gt;
-&lt;td style=""border: 1px solid black; padding: 5px; text-align: center;""&gt;Value11&lt;/td&gt;
-&lt;td style=""border: 1px solid black; padding: 5px; text-align: center;""&gt;Value12&lt;/td&gt;&lt;/tr&gt;"]</InArgument>
-              </Assign.Value>
-            </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="433.6,83.2" sap2010:WorkflowViewState.IdRef="Assign_3">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:String">[str_HTMLRow]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:String" xml:space="preserve">[str_HTMLRow.Replace("Value0", CurrentRow(0).ToString).
-Replace("Value1", CurrentRow(1).ToString).
-Replace("Value2", CurrentRow(2).ToString).
-Replace("Value3", CurrentRow(3).ToString).
-Replace("Value4", CurrentRow(4).ToString).
-Replace("Value5", CurrentRow(5).ToString).
-Replace("Value6", CurrentRow(6).ToString).
-Replace("Value7", CurrentRow(7).ToString).
-Replace("Value8", CurrentRow(8).ToString).
-Replace("Value9", CurrentRow(9).ToString).
-Replace("Value10", CurrentRow(10).ToString).
-Replace("Value11", CurrentRow(11).ToString).
-Replace("Value12", CurrentRow(10).ToString)]</InArgument>
-              </Assign.Value>
-            </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:String">[str_HTML]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[str_HTML.Insert(str_HTML.LastIndexOf("&lt;/tr&gt;"), str_HTMLRow)]</InArgument>
-              </Assign.Value>
-            </Assign>
-          </Sequence>
-        </ActivityAction>
-      </ui:ForEachRow.Body>
-    </ui:ForEachRow>
-    <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="C:\Users\user\Documents\UiPath\Betacom_Recruitment_Assignment\.data\HtmlContent0.html" sap:VirtualizedContainerService.HintSize="510.4,134.4" sap2010:WorkflowViewState.IdRef="WriteTextFile_3" Text="[str_HTML]" />
-    <umab:CreateHtmlContent DisplayName="Zgeneruj HTML z tabeli" sap:VirtualizedContainerService.HintSize="510.4,153.6" HtmlContent="[str_HTML_Content]" sap2010:WorkflowViewState.IdRef="CreateHtmlContent_2">
-      <umab:CreateHtmlContent.HtmlContentArg>
-        <umabh:HtmlContentArgument FilePath=".data/index.html">
-          <umabh:HtmlContentArgument.RuntimeImages>
-            <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-          </umabh:HtmlContentArgument.RuntimeImages>
-          <umabh:HtmlContentArgument.ValueMappings>
-            <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
-          </umabh:HtmlContentArgument.ValueMappings>
-        </umabh:HtmlContentArgument>
-      </umab:CreateHtmlContent.HtmlContentArg>
-    </umab:CreateHtmlContent>
-    <ui:WriteTextFile File="{x:Null}" DisplayName="Zapisz dane jako HTML" FileName="C:\Users\user\Documents\UiPath\Betacom_Recruitment_Assignment\Data\Output\Raport_20231106_155049.html" sap:VirtualizedContainerService.HintSize="510.4,134.4" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="[HTML_Content]" />
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt1]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="ReadRange_6" SheetName="Sheet1" WorkbookPath="C:\Users\user\Desktop\New folder\Test.xlsx" />
+    <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="sd:DataTable">[dt2]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="sd:DataTable">[dt1.AsEnumerable.GroupBy(Function(x) x("Product").ToString).SelectMany(Function(y) y).Copytodatatable]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="sd:DataTable">[dt2]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="sd:DataTable">[dt1.AsEnumerable.OrderBy(Function(x) x("Product").ToString).CopyToDataTable]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt2]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="ReadRange_7" SheetName="Sheet2" WorkbookPath="C:\Users\user\Desktop\New folder\Test.xlsx" />
+    <ui:MergeDataTable Destination="[dt2]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="434,133" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="AddWithKey" Source="[dt1]" />
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt2]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet3" WorkbookPath="C:\Users\user\Desktop\New folder\Test.xlsx" />
   </Sequence>
 </Activity>

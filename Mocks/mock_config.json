@@ -1,0 +1,8 @@
+{
+  "mockedWorkflows": [
+    {
+      "mockFilePath": "Mocks\\KRZ\\Process_KRZ_mock.xaml",
+      "sourceWorkflowPath": "KRZ\\Process_KRZ.xaml"
+    }
+  ]
+}

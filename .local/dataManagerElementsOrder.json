@@ -1,0 +1,320 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_HTML_OutputContent&StateMachine_1",
+        "str_NumerKRS&StateMachine_1",
+        "dict_TechnicalStatus&StateMachine_1",
+        "br_Chrome&StateMachine_1",
+        "dt_KRS&StateMachine_1",
+        "dt_KRZ&StateMachine_1",
+        "dt_OutputTemplate&StateMachine_1",
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "ShouldStop&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_OrchestratorQueueName",
+        "in_OrchestratorQueueFolder"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_Nazwa&Sequence_1",
+        "str_NIP&Sequence_1",
+        "str_REGON&Sequence_1",
+        "str_FormaPrawna&Sequence_1",
+        "str_DataWpisu&Sequence_1",
+        "str_RodzajPostępowania&Sequence_1",
+        "str_Sygnatura&Sequence_1",
+        "str_DataRejestracji&Sequence_1",
+        "str_DataZakończenia&Sequence_1",
+        "str_Status&Sequence_1",
+        "dt_Postępowania&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_NumerKRS",
+        "io_dict_TechnicalStatus",
+        "in_TransactionItem",
+        "in_Config",
+        "br_Chrome",
+        "io_dt_KRS",
+        "io_dt_KRZ"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/CloseAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "br_Chrome"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "QueueRetry&Sequence_38",
+        "ScreenshotPath&Sequence_38"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_BusinessException",
+        "in_TransactionField1",
+        "in_TransactionField2",
+        "in_TransactionID",
+        "in_SystemException",
+        "in_Config",
+        "in_TransactionItem",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "io_ConsecutiveSystemExceptions",
+        "br_Chrome"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/KillAllProcesses.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DT_ZapiszDaneWyjsciowe.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_DataRaportu&Sequence_15",
+        "str_HTMLRow&Sequence_21",
+        "lst_InputOrder&Sequence_15",
+        "br_Crome&Sequence_1",
+        "dt_Joined&Sequence_1",
+        "str_ReportName&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_HTML_OutputContent",
+        "in_dt_TransactionData",
+        "in_dt_OutputTemplate",
+        "in_Config",
+        "in_dict_TechnicalStatus",
+        "in_dt_KRS",
+        "in_dt_KRZ"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "KRS/Process_KRS.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "fi_DownloadedJSON&Sequence_1",
+        "int_CurrentInputRowKRZ&Sequence_1",
+        "int_CurrentInputRowKRS&Sequence_1",
+        "str_JSONAsString&Sequence_2",
+        "jobj_DaneKRS&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_NumerKRS",
+        "br_Chrome",
+        "io_dt_KRS",
+        "io_TransactionItem",
+        "io_dt_KRZ",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionItem",
+        "out_TransactionField1",
+        "out_TransactionField2",
+        "out_TransactionID",
+        "io_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/TakeScreenshot.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Screenshot&Sequence_1",
+        "ScreenshotFileInfo&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Folder",
+        "io_FilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/RetryCurrentTransaction.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "in_SystemException",
+        "in_QueueRetry"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "out_br_Chrome"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "KRZ/Process_KRZ.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_Postępowania&Sequence_1",
+        "int_CurrentInputRowKRZ&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_TransactionItem",
+        "in_str_NumerKRS",
+        "br_Chrome",
+        "in_Config",
+        "io_dt_KRZ"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "KRZ/TableExtraction_Cleanse.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "br_Chrome",
+        "dt_Postepowania",
+        "in_str_NumerKRS"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/_sandbox.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt1&Sequence_14",
+        "dt2&Sequence_14"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "../../../AppData/Local/Programs/UiPath/Studio/Snippets/Windows/SnippetsVBasic/Samples/Advanced/Filter Collection using LINQ.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "names&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "../../../AppData/Local/Programs/UiPath/Studio/Snippets/Windows/SnippetsVBasic/Samples/Advanced/Filter DataTable Using LINQ.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dataTable&Sequence_1",
+        "selectedRows&Sequence_1",
+        "age&Sequence_2",
+        "sex&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/MainTestCase.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "StatusFileName&Sequence_1",
+        "ExpectedDataFileName&Sequence_1",
+        "dt_ResultsData&Sequence_4",
+        "dt_ExpectedData&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/ProcessTestCase.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Config&Sequence_1",
+        "TransactionItem&Sequence_1",
+        "TransactionNumber&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/InitAllApplicationsTestCase.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Config&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Tests/InitAllSettingsTestCase.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Config&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
